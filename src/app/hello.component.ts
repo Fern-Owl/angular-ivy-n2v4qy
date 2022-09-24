@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  template: './app.component.html',
-  styles: ['./app.component.css'],
+  selector: 'hello',
+  template: `<h1>Hello {{name}}!</h1>`,
+  styles: [`h1 { font-family: Lato; }`],
 })
-export class helloComponent {
-  title = 'cars-app';
+export class HelloComponent {
+  @Input() name: string;
 }
